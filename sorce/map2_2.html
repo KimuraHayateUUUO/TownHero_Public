@@ -41,7 +41,7 @@
             "淡色地図": gsipale,
             "オープンストリートマップ": osm
           };
-          //layersコントロールにbaseMapsオブジェクトを設定して地図に追加 コントロール内にプロパティ名が表示される
+          //layersコントロールにbaseMapsオブジェクトを設定して地図に追加 コントロール内にプロパティ名が表示される。
           L.control.layers(baseMaps).addTo(map);
           gsi.addTo(map);
 
@@ -54,7 +54,7 @@
           }
 
           function onMarkerClick(e) {
-            //マーカーのclickイベント呼び出される クリックされたマーカーを地図のレイヤから削除する
+            //マーカーのclickイベント呼び出される クリックされたマーカーを地図のレイヤから削除する。
             map.removeLayer(e.target);
           }
         }, function (error) {
@@ -63,10 +63,10 @@
               alert("位置情報の利用が許可されていません");
               break;
             case 2: //POSITION_UNAVAILABLE
-              alert("現在位置が取得できませんでした");
+              alert("現在位置が取得できませんでした。");
               break;
             case 3: //TIMEOUT
-              alert("タイムアウトになりました");
+              alert("タイムアウトになりました。");
               break;
             default:
               alert("その他のエラー(エラーコード:" + error.code + ")");

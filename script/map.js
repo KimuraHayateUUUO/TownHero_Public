@@ -1,4 +1,4 @@
-
+// super unchi
 
   function init() {
     navigator.geolocation.getCurrentPosition(function succes_func(position) {
